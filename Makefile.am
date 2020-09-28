@@ -11,7 +11,7 @@ extpkg_headers = @EXTPKG_HEADERS@
 extpkg_ldadd   = @EXTPKG_LDADD@
 hqa_inc        = @HQA_INC@
 lns            = @LN_S@
-ldadd          = @LIBS@
+ldadd          = @LIBS@ -lltdl
 
 #------------------------------------------------------------------------------
 
@@ -142,9 +142,9 @@ dyndev_SRC =  \
 #                    to Windows DLLs
 #-----------------------------------------------------------------
 
-XSTATIC =
+XSTATIC = -shared
 DYNSRC  =
-LTDL    =  ltdl.c
+LTDL    =
 
 DYNMOD_LD_FLAGS =   \
   -module           \
@@ -512,7 +512,6 @@ libherc_la_SOURCES = \
   $(DYNSRC)
 
 EXTRA_libherc_la_SOURCES = \
-  ltdl.c             \
   memrchr.c          \
   $(dynamic_SRC)     \
   $(dyndev_SRC)      \
@@ -956,7 +955,6 @@ noinst_HEADERS =          \
   instfmts.h              \
   linklist.h              \
   logger.h                \
-  ltdl.h                  \
   machdep.h               \
   memrchr.h               \
   mpc.h                   \

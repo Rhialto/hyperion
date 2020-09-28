@@ -4,6 +4,7 @@
 
   MSGLEVEL  VERBOSE                   # normal/verbose/debug
 # MODPATH   /usr/local/lib/hercules   # Where to search for modules
+  MODPATH   /usr/pkg/lib/hercules     # Where to search for modules
 
 
 #-------------------------------------------------------------------------------

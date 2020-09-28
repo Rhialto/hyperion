@@ -3031,9 +3031,11 @@ test  "$hc_cv_is_mingw"    =  "yes"  &&  LIBS="$LIBS -lws2_32"
 #------------------------------------------------------#
 
 if test "$hc_cv_opt_debug" = "yes"; then
-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}d
+  #hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}d
+  hc_cv_pkg_lib_suffix=_d_pic
 else
-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}
+  #hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}
+  hc_cv_pkg_lib_suffix=_pic
 fi
 
 AC_CACHE_SAVE()
