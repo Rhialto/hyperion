@@ -61,7 +61,7 @@ int main( int argc, char* argv[] )
 
     char *cmdbuf, *cmd;
 
-#if defined( HDL_USE_LIBTOOL )
+#if defined( HDL_USE_LIBTOOL ) && 0
     /* LTDL Preloaded symbols for HDL using libtool */
     LTDL_SET_PRELOADED_SYMBOLS();
 #endif

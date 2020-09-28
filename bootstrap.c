@@ -118,13 +118,14 @@ static void crash_signal_handler( int signo )
 /*   - Passes control to the impl() function in impl.c               */
 /*                                                                   */
 /*-------------------------------------------------------------------*/
+
 int main( int ac, char* av[] )
 {
     int rc = 0;
     save_term_attrs();
     DROP_PRIVILEGES( CAP_SYS_NICE );
     SET_THREAD_NAME( BOOTSTRAP_NAME );
-#if defined( HDL_USE_LIBTOOL )
+#if defined( HDL_USE_LIBTOOL ) && 0
     LTDL_SET_PRELOADED_SYMBOLS();
 #endif
 #if defined( HAVE_SIGNAL_HANDLING )
