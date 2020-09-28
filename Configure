@@ -1,0 +1,1 @@
+./configure --enable-extpkgs=/usr/pkg/lib/sdlhercules CFLAGS=-I/usr/pkg/include  "LDFLAGS=-L/usr/pkg/lib -Wl,-R/usr/pkg/lib"
